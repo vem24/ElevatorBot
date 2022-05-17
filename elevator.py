@@ -1,5 +1,4 @@
 import time
-items = []
 
 def print_pause(message_to_print):
     print(message_to_print)
@@ -76,5 +75,10 @@ def ride_elevator():
 
 
     print_pause("Where would you like to go next?")
-intro()
-ride_elevator()
+
+def play_game():
+    items = []
+    intro()
+    ride_elevator()
+
+play_game()
