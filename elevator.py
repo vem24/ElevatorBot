@@ -21,6 +21,7 @@ def first_floor():
         print_pause("The clerk greets you and gives you your ID "
                     "card.")
         items.append("ID card")
+        ride_elevator()
 
 def second_floor():
     print_pause("You push the button for the second floor.")
@@ -39,6 +40,7 @@ def second_floor():
             print_pause("He has something for you, but says he can't "
                         "give it to you until you go get your ID card.")
     print_pause("You head back to the elevator.")
+    ride_elevator()
 
 def third_floor():
         print_pause("You push the button for the third floor.")
@@ -50,15 +52,16 @@ def third_floor():
           if "handbook" in items:
             print_pause("Fortunately, you got that from HR!")
             print_pause("Congratulatons! You are ready to start your new job as vice president of engineering!")
-            #break
           else:
             print_pause("They scowl when they see that you don't have it, and send you back to the elevator.")
+            ride_elevator()
         else:
           print_pause("Unfortunately, the door is locked and you can't get in.")
           print_pause("It looks like you need some kind of key card to open the door.")
           print_pause("You head back to the elevator.")
+          ride_elevator()
 
-while True:
+def ride_elevator():
     print_pause("Please enter the number for the "
                 "floor you would like to visit:")
     floor = input("1. Lobby\n"
@@ -73,3 +76,5 @@ while True:
 
 
     print_pause("Where would you like to go next?")
+
+ride_elevator()
