@@ -5,9 +5,9 @@ def print_pause(message_to_print):
     print(message_to_print)
     time.sleep(2)
 
-
-print_pause("You have just arrived at your new job!")
-print_pause("You are in the elevator.")
+def intro():
+    print_pause("You have just arrived at your new job!")
+    print_pause("You are in the elevator.")
 
 def first_floor():
     print_pause("You push the button for the first floor.")
@@ -76,5 +76,5 @@ def ride_elevator():
 
 
     print_pause("Where would you like to go next?")
-
+intro()
 ride_elevator()
